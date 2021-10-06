@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+    {% include 'head.html' %}
+    <body>
+    {% include 'header.html' %}
+
+    <h2>Kết quả tìm kiếm</h2>
+    {% for post in queryset %}
+        <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+        <br />
+    {% endfor %}
+
+    {% include 'scripts.html' %}
+    </body>
+</html>
